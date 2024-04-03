@@ -1,1 +1,26 @@
-here is my code 
+#include<iostream>
+#include<queue>
+using namespace std;
+class node{
+  public:
+    int data;
+    node* left;
+  node* right;
+
+node(int data){
+  this->data = data;
+  left = NULL;
+  right = NULL;
+}
+
+};
+
+void inOrderTraversal(node* root){
+  if(root == NULL){
+    return;
+  }
+  inOrderTraversal(root->left);
+  cout<<root->data<<" ";
+  inOrderTraversal(root->right);
+ 
+}
