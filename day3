@@ -14,12 +14,12 @@ node(int data){
 }
 
 };
-void inOrderTraversal(node* root){
-  if(root == NULL){
-    return;
-  }
-  inOrderTraversal(root->left);
+
+void postOrderTraversal(node* root){
+        if(root == NULL){
+          return;
+        }
+  postOrderTraversal(root->left);
+  postOrderTraversal(root->right);
   cout<<root->data<<" ";
-  inOrderTraversal(root->right);
- 
 }
